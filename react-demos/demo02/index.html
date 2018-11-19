@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script src="../build/react.js"></script>
     <script src="../build/react-dom.js"></script>
     <script src="../build/browser.min.js"></script>
@@ -10,19 +11,19 @@
     <script type="text/babel">
       var names = ['Alice', 'Emily', 'Kate'];
 
-      ReactDOM.render(
-        {/* ReactDOM.render 是 React 的最基本方法，用于将模板转为 HTML 语言，并插入指定的 DOM 节点。 */}
+      ReactDOM.render(   
         <div>
         {
           names.map(function (name, index) {
-            return <div key={index}>Hello, {name}!</div>
-            {/*  HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写 */}
+            return <div key={index}>Hello, {name}!</div>           
           })
         }
         </div>,
         document.getElementById('example')
       );
-      {/*JSX 的基本语法规则：遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析*/}
+      {/* ReactDOM.render 是 React 的最基本方法，用于将模板转为 HTML 语言，并插入指定的 DOM 节点。 */}
+      {/* HTML 语言直接写在 JavaScript 语言之中，不加任何引号，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写 */}
+      {/* JSX 的基本语法规则：遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析*/}
     </script>
   </body>
 </html>
